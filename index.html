@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ambiente demonstrativo de negociação com dados exclusivamente fictícios.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <title>Portal de Homologação | Consulta</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="environment-bar" role="status">
+    Ambiente de homologação · dados 100% fictícios · nenhum dado é enviado ou armazenado
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Portal de Homologação, início">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>
+        <strong>Portal de Homologação</strong>
+        <small>Experiência de negociação</small>
+      </span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a class="nav-link active" href="index.html" aria-current="page">Área do cliente</a>
+      <a class="nav-link" href="admin.html">Painel demonstrativo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Validação de experiência</span>
+        <h1>Uma jornada simples para simular uma negociação.</h1>
+        <p>Este protótipo não consulta bases reais, não processa pagamentos e funciona inteiramente no navegador.</p>
+        <div class="trust-row" aria-label="Características do ambiente">
+          <span>Sem CPF real</span>
+          <span>Sem cartão</span>
+          <span>Sem transmissão</span>
+        </div>
+      </div>
+
+      <section class="query-card" aria-labelledby="query-title">
+        <div class="card-heading">
+          <span class="step">01</span>
+          <div>
+            <p class="kicker">Consulta simulada</p>
+            <h2 id="query-title">Acesse um cenário de teste</h2>
+          </div>
+        </div>
+
+        <form id="query-form" novalidate>
+          <label for="test-id">Identificador fictício</label>
+          <div class="input-row">
+            <input id="test-id" name="test_id" value="TESTE-0001" autocomplete="off" inputmode="text" maxlength="38" pattern="TESTE-[A-Z0-9-]+" aria-describedby="test-help test-error">
+            <button type="submit">Simular consulta</button>
+          </div>
+          <p id="test-help" class="help">Use apenas códigos iniciados por <strong>TESTE-</strong>. Não informe CPF, telefone ou qualquer dado real.</p>
+          <p id="test-error" class="field-error" role="alert" hidden></p>
+        </form>
+      </section>
+    </section>
+
+    <section id="result" class="result-panel" aria-live="polite" hidden>
+      <div class="result-header">
+        <div>
+          <span class="eyebrow">Cenário carregado</span>
+          <h2>Olá, Cliente Fictício</h2>
+          <p>Contrato demonstrativo <strong>HML-2026-0001</strong></p>
+        </div>
+        <span class="status-badge">Proposta disponível</span>
+      </div>
+
+      <div class="summary-grid">
+        <article class="summary-item">
+          <span>Saldo demonstrativo</span>
+          <strong>R$ 1.840,00</strong>
+          <small>Valor totalmente fictício</small>
+        </article>
+        <article class="summary-item featured">
+          <span>Proposta de homologação</span>
+          <strong>6 × R$ 268,40</strong>
+          <small>Total simulado de R$ 1.610,40</small>
+        </article>
+        <article class="summary-item">
+          <span>Economia simulada</span>
+          <strong>R$ 229,60</strong>
+          <small>Nenhum efeito financeiro</small>
+        </article>
+      </div>
+
+      <div class="notice safe-notice">
+        <span aria-hidden="true">✓</span>
+        <p><strong>Fim seguro da demonstração.</strong> Não solicitamos pagamento, cartão, CVV, senha ou código SMS neste ambiente.</p>
+      </div>
+    </section>
+
+    <section class="process-section" aria-labelledby="process-title">
+      <div>
+        <span class="eyebrow">Como funciona</span>
+        <h2 id="process-title">Homologação sem dados pessoais</h2>
+      </div>
+      <ol class="process-list">
+        <li><span>1</span><div><strong>Escolha um cenário</strong><p>Use um identificador TESTE-* previamente combinado.</p></div></li>
+        <li><span>2</span><div><strong>Confira a experiência</strong><p>Analise textos, valores sintéticos e comportamento responsivo.</p></div></li>
+        <li><span>3</span><div><strong>Registre o parecer</strong><p>Envie o feedback pelo canal corporativo da empresa parceira.</p></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Protótipo de homologação · Nenhuma integração real está ativa</p>
+    <p>Não informe dados pessoais, bancários ou credenciais.</p>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

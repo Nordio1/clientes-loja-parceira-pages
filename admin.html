@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel administrativo demonstrativo com dados exclusivamente fictícios.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <title>Portal de Homologação | Painel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="admin-body">
+  <div class="environment-bar" role="status">
+    Painel demonstrativo · métricas sintéticas · autenticação real será aplicada no servidor
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Portal de Homologação, início">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>
+        <strong>Portal de Homologação</strong>
+        <small>Painel demonstrativo</small>
+      </span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a class="nav-link" href="index.html">Área do cliente</a>
+      <a class="nav-link active" href="admin.html" aria-current="page">Painel demonstrativo</a>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-intro">
+      <div>
+        <span class="eyebrow">Visão administrativa</span>
+        <h1>Acompanhamento de homologação</h1>
+        <p>Os indicadores abaixo são fixos e fictícios. Esta página não consulta servidores.</p>
+      </div>
+      <div class="demo-date">
+        <span>Período demonstrativo</span>
+        <strong>Agosto de 2026</strong>
+      </div>
+    </section>
+
+    <section class="metric-grid" aria-label="Indicadores fictícios">
+      <article class="metric-card">
+        <span class="metric-icon" aria-hidden="true">↗</span>
+        <p>Consultas fictícias</p>
+        <strong data-count="24">0</strong>
+        <small>+12% no cenário simulado</small>
+      </article>
+      <article class="metric-card">
+        <span class="metric-icon" aria-hidden="true">◎</span>
+        <p>Propostas fictícias</p>
+        <strong data-count="11">0</strong>
+        <small>45,8% das consultas de teste</small>
+      </article>
+      <article class="metric-card">
+        <span class="metric-icon" aria-hidden="true">✓</span>
+        <p>Simulações concluídas</p>
+        <strong data-count="7">0</strong>
+        <small>Sem efeito financeiro</small>
+      </article>
+      <article class="metric-card protected">
+        <span class="metric-icon" aria-hidden="true">◇</span>
+        <p>Registros reais</p>
+        <strong>0</strong>
+        <small>Coleta desativada por projeto</small>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card chart-card">
+        <div class="dashboard-heading">
+          <div><p class="kicker">Volume sintético</p><h2>Jornada de homologação</h2></div>
+          <span class="status-badge">Somente demonstração</span>
+        </div>
+        <div class="bar-chart" aria-label="Gráfico fictício de consultas por dia">
+          <div><span style="height: 38%"></span><small>Seg</small></div>
+          <div><span style="height: 60%"></span><small>Ter</small></div>
+          <div><span style="height: 48%"></span><small>Qua</small></div>
+          <div><span style="height: 82%"></span><small>Qui</small></div>
+          <div><span style="height: 68%"></span><small>Sex</small></div>
+          <div><span style="height: 30%"></span><small>Sáb</small></div>
+          <div><span style="height: 18%"></span><small>Dom</small></div>
+        </div>
+      </article>
+
+      <article class="dashboard-card checklist-card">
+        <p class="kicker">Controles do protótipo</p>
+        <h2>Ambiente protegido</h2>
+        <ul class="security-list">
+          <li><span>✓</span> Nenhum CPF real aceito</li>
+          <li><span>✓</span> Nenhum cartão ou CVV solicitado</li>
+          <li><span>✓</span> Nenhum envio de rede no frontend</li>
+          <li><span>✓</span> Nenhum armazenamento local</li>
+          <li><span>✓</span> Robôs de busca desencorajados</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="dashboard-card table-card">
+      <div class="dashboard-heading">
+        <div><p class="kicker">Cenários recentes</p><h2>Atividades fictícias</h2></div>
+        <button id="refresh-demo" class="secondary-button" type="button">Atualizar demonstração</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Identificador</th><th>Etapa</th><th>Status</th><th>Horário fictício</th></tr></thead>
+          <tbody id="demo-rows">
+            <tr><td>TESTE-0001</td><td>Consulta</td><td><span class="table-status success">Concluída</span></td><td>09:42</td></tr>
+            <tr><td>TESTE-0002</td><td>Proposta</td><td><span class="table-status pending">Em análise</span></td><td>09:18</td></tr>
+            <tr><td>TESTE-0003</td><td>Simulação</td><td><span class="table-status success">Concluída</span></td><td>08:55</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Protótipo de homologação · A página administrativa real exigirá autenticação no servidor e acesso restrito.</p>
+  </footer>
+
+  <script src="assets/admin.js" defer></script>
+</body>
+</html>
